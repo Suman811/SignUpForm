@@ -13,7 +13,7 @@
   
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control"  formControlName="password" id="password" placeholder="Enter your password" [defaultValue]="null">
+        <input type="password" class="form-control"  formControlName="password" id="password" placeholder="Enter your password">
         <div class="text-danger" *ngIf="loginform.controls.password.invalid && loginform.controls.password.touched">Password is required with at least one lowercase and one uppercase, a digit and special character</div>
         
         

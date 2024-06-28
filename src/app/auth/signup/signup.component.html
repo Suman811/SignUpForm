@@ -117,6 +117,7 @@
                     class="text-danger"> Password doesn't match. </div>
 
             </div>
+            <p> Have an account<a [routerLink]="['/login']">Login </a> </p>
             <button type="submit" routerLink="login" class="btn btn-primary" [disabled]="registrationForm.invalid || mismatch" >Sign
                 Up</button>
         </form>

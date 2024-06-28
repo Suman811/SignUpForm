@@ -8,6 +8,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import {MatSelectModule} from '@angular/material/select';
 
+
 @NgModule({
   declarations: [
     SignupComponent,
@@ -18,7 +19,8 @@ import {MatSelectModule} from '@angular/material/select';
     AuthRoutingModule,
     ReactiveFormsModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+
   ]
 })
 export class AuthModule { }
