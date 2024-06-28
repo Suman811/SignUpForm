@@ -9,10 +9,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule} from '@angular/material/menu';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
  
 @NgModule({
   declarations: [
-    HeaderSidebarComponent
+    HeaderSidebarComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,9 @@ import { MatMenuModule} from '@angular/material/menu';
 
   ],
   exports:[
-    HeaderSidebarComponent
+    HeaderSidebarComponent,
+    HeaderComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }

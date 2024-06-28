@@ -22,6 +22,7 @@ export class SignupComponent implements OnInit {
     const b = this.registrationForm.value.confirmpassword;
     if (a != b) {
       this.mismatch = true;
+      
     }
     else {
       this.mismatch = false;
