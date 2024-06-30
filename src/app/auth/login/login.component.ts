@@ -31,6 +31,14 @@ export class LoginComponent {
     password: new FormControl("", [Validators.required, Validators.pattern(('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}'))])
   })
 
+  showPassword = false;
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
+getControl(a:any){
+  return this.loginform.get(a);
+}
   saveform() {
     const a = this.loginform.value.email;
     const b = this.loginform.value.password;
@@ -42,7 +50,7 @@ export class LoginComponent {
     if (a == storedEmail && b == storedPassword) {
       alert("Login successful");
       localStorage.setItem("mytoken", "token");
-      this.route.navigate(['/user/dashboard']);
+      this.route.navigate(['/user']);
     }
     else {
       alert("Incorrect username or password");

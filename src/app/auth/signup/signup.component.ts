@@ -71,7 +71,9 @@ export class SignupComponent implements OnInit {
     
   ];
 
-  
+  getControl(value:string){
+    return this.registrationForm.get(value);
+   }
 
 phone(e:any){
   
@@ -81,25 +83,22 @@ phone(e:any){
 }
 
   saveForm() {
-//     debugger;
-// if(this.registrationForm.valid){
-//     console.log(this.registrationForm.value);
-// }
-// else{
-//   console.log("Form is invalid");
-// }
-
-//   }
+debugger;
+ if(this.registrationForm.valid){
 
 let p = this.registrationForm.value.email || '';
 let q = this.registrationForm.value.password || '';
 console.log(this.registrationForm.value);
 localStorage.setItem('email',p);
 localStorage.setItem('password',q);
-
+localStorage.setItem('formdata',JSON.stringify(this.registrationForm.value));
 
 
   }
+  else{
+    console.log("form is invalid");
+  }
+  
 }
-
+}
 
